@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 import '../utils/utils.dart';
 
-abstract class Failure {
+abstract class Failure extends Error {
   void handleError();
 }
 

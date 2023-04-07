@@ -44,10 +44,9 @@ class SofUserReputationController extends GetxController {
       showToastMessage('User already on bookmarked list');
     } else {
       result.add(model);
+      sofUserUseCase.setSofBookmarkedUsers(listUser: result);
       showToastMessage('Bookmark success!');
     }
-
-    sofUserUseCase.setSofBookmarkedUsers(listUser: result);
   }
 
   @override

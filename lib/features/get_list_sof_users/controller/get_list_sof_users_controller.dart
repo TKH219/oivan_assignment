@@ -17,7 +17,6 @@ class GetListSofUsersController extends GetxController {
   bool hasMore = true;
 
   Future<void> getListSofUsers({bool showLoading = true}) async {
-    // showLoadingCircle(showLoading);
     final result = await sofUserUseCase.onGetSofUsers(
       limit: limitUser,
       page: currentPage,
@@ -35,8 +34,6 @@ class GetListSofUsersController extends GetxController {
 
       update();
     });
-
-    // showLoadingCircle(false);
   }
 
   @override
